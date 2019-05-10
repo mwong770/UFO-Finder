@@ -1,0 +1,202 @@
+* {
+  box-sizing: border-box;
+  font-family: Ubuntu, sans-serif;
+  font-size: 16px;
+}
+
+/* wraps all except footer */
+.wrapper {
+  position: relative;
+  min-height: 100%;
+  padding-bottom: 100px;
+}
+
+.navbar {
+  padding: 5px;
+  margin: 0;
+}
+
+.nav-ufo {
+  position: absolute;
+  bottom: 5px;
+  left: 150px;
+  width: 35px;
+  color: white;
+}
+
+.hero {
+  height: 450px;
+  padding-top: 120px;
+  background-position: bottom center;
+  background-size: cover;
+  background-image: url("../images/nasa.jpg");
+  /* parallax */
+  background-attachment: fixed;
+}
+
+/* banner text */
+.hero h1 {
+  animation: title 1.2s forwards linear;
+}
+
+.hero p {
+  opacity: 0;
+  animation: subtitle 1.2s forwards linear;
+  animation-delay: 1.2s;
+  font-size: 20px;
+  padding-top: 10px;
+}
+
+.filters .panel-body {
+  padding: 0;
+}
+
+.filters {
+  margin-top: 10px;
+}
+
+.form-control {
+    padding-left: 6px;
+}
+
+label {
+    font-size: 14px;
+}
+
+/* input placeholder */
+.form-control::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: #8e979f;
+}
+
+.form-control::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #8e979f;
+}
+
+.form-control:-ms-input-placeholder {
+  /* IE 10+ */
+  color: #8e979f;
+}
+
+.form-control:-moz-placeholder {
+  /* Firefox 18- */
+  color: #8e979f;
+}
+
+.margin-top-50 {
+  margin-top: 50px;
+}
+
+.fa-sort-alpha-up {
+    border: solid 1px #4e5d6c;
+    background-color: #4e5d6c;
+    margin-left: 3px;
+}
+
+.active-sort {
+    border-bottom: solid 1px white;
+}
+
+#state-head {
+    width: 75px;
+}
+
+#country-head {
+    width: 95px;
+}
+
+#table-area th {
+  text-align: center;
+}
+
+#table-area th:first-child,
+#table-area th:nth-child(2),
+#table-area th:nth-child(6) {
+  min-width: 70px;
+}
+
+.footer {
+  background: #4e5d6c;
+  text-align: center;
+  padding-top: 30px;
+  font-size: 13px;
+  /*sticky footer */
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  min-height: 80px;
+}
+
+/************ KEYFRAMES *** KEYFRAMES *** KEYFRAMES *******************************/
+
+                    /* animate banner text */
+
+@keyframes title {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    font-size: 75px;
+    opacity: 1;
+  }
+}
+
+@keyframes subtitle {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes smaller-title {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    font-size: 55px;
+    opacity: 1;
+  }
+}
+
+/************ MEDIA 720 MEDIA 720 MEDIA 720 MEDIA 720 MEDIA 720 *******************************/
+
+@media (max-width: 720px) {
+  #table-area thead {
+    display: none;
+  }
+
+  #table-area tr td:first-child {
+    font-weight: bold;
+    background: #1b3146;
+  }
+
+  #table-area tr td:last-child {
+    margin-bottom: 20px;
+  }
+
+  /* adds line to bottom of row */
+  #table-area tr td:last-child::after {
+    display: block;
+    width: 100%;
+    height: 1px;
+    margin-top: 20px;
+    content: " ";
+    background: aliceblue;
+  }
+
+  #table-area tbody td {
+    display: block;
+    text-align: center;
+  }
+
+  .hero h1 {
+    animation: smaller-title 1.2s forwards linear;
+  }
+}
