@@ -1,5 +1,7 @@
 # UFO-Finder
 
+A dynamically generated table of UFO sightings that can be sorted and filtered based on multiple criteria.
+
 [Check Out UFO-Finder](https://mwong770.github.io/UFO-Finder/)
 
 
@@ -32,7 +34,9 @@
 
 ## <a name="features"></a> :boom: Features
 
-*
+* Displays a table of UFO Sightings
+* Users can filter the table based on multiple column values
+* Users can sort columns
 
 
 ## <a name="developer"></a> :bust_in_silhouette: Developer
